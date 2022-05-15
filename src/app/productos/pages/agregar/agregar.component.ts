@@ -21,11 +21,13 @@ export class AgregarComponent implements OnInit {
   }
 
   cambiarNombre() {
-    this.nombreDado = 'Irvinzato';
+    let aleatorio = Math.random().toString();
+    this.nombreDado = ` Irvinzato  ${aleatorio} `;
   }
 
   cambiarColor() {
-    this.colorQueQuiero = 'green';
+    const color = "#xxxxxx".replace(/x/g, y=>(Math.random()*16|0).toString(16));
+    this.colorQueQuiero = color;
   }
 
 }
