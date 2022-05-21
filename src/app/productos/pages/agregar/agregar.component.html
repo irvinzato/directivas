@@ -20,11 +20,11 @@
     
     <div class="row mt-3">
         <div class="col">
-            <button class="btn btn-primary"
+            <button class="btn btn-primary m-2"
                     (click)="cambiarNombre()">
             Cambiar Nombre
         </button>
-            <button class="btn btn-primary"
+            <button class="btn btn-primary m-2"
                     (click)="cambiarColor()">
             Cambiar Color
         </button>
@@ -45,3 +45,13 @@
       mensaje="Debe ingresar este campo"
       *ngIf="miFormulario.get('nombre')?.invalid">
 </span> -->
+
+<!-- Utilizando "*" en el nombre de mi directiva, es como le mando toda la referencia de mi elemento HTML a mi directiva, si no da un error -->
+<div class="row mt-5" 
+    *customIf="miFormulario.valid">  
+    <div class="col">
+        <div class="alert alert-primary">
+            Todo ready !
+        </div>
+    </div>
+</div>
